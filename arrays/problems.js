@@ -144,3 +144,35 @@ function maxArea(arr) {
 }
 console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
 */
+
+// Trapping rain water
+
+/*
+function trapRainWater(arr) {
+  let left = 0,
+    right = arr.length - 1;
+  let leftMax = 0,
+    rightMax = 0;
+  let trappedWater = 0;
+
+  while (left < right) {
+    if (arr[left] < arr[right]) {
+      if (arr[left] > leftMax) {
+        leftMax = arr[left];
+      } else {
+        trappedWater += leftMax - arr[left];
+      }
+      left++;
+    } else {
+      if (arr[right] > rightMax) {
+        rightMax = arr[right];
+      } else {
+        trappedWater += rightMax - arr[right];
+      }
+      right--;
+    }
+  }
+  return trappedWater;
+}
+console.log(trapRainWater([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]));
+*/
